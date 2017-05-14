@@ -56,5 +56,6 @@ public class Player : MonoBehaviour {
 
         grounded = Physics2D.OverlapCircle(groundCheck.position, groundDistance, whatIsGround);
         anim.SetBool("Jump", !grounded);
+		anim.SetTrigger ("Jump");
 	}
 }
