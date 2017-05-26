@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-public class MovmentScript : MonoBehaviour {
+public class MovementScript : MonoBehaviour {
 
 	private Rigidbody2D myRigidbody2D;
     public Animator animacao;
