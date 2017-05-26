@@ -1,0 +1,19 @@
+<i>
+  <i image="stand_0.png" delay="3000" x="-20" y="-69"/>
+  <i image="move_0.png" delay="100" x="-21" y="-70"/>
+  <i image="move_1.png" delay="100" x="-21" y="-70"/>
+  <i image="move_2.png" delay="100" x="-21" y="-70"/>
+  <i image="move_3.png" delay="100" x="-21" y="-70"/>
+  <i image="cleaning_0.png" delay="100" x="-23" y="-69"/>
+  <i image="cleaning_1.png" delay="100" x="-23" y="-69"/>
+  <i image="cleaning_2.png" delay="100" x="-23" y="-69"/>
+  <i image="cleaning_3.png" delay="100" x="-23" y="-69"/>
+  <i image="cleaning_4.png" delay="100" x="-23" y="-69"/>
+  <i image="cleaning_5.png" delay="100" x="-23" y="-69"/>
+  <i image="cleaning_6.png" delay="100" x="-23" y="-69"/>
+  <i image="cleaning_7.png" delay="100" x="-23" y="-69"/>
+  <i image="cleaning_8.png" delay="100" x="-23" y="-69"/>
+  <i image="cleaning_9.png" delay="100" x="-23" y="-69"/>
+  <i image="cleaning_10.png" delay="100" x="-23" y="-69"/>
+  <i image="suprise_0.png" delay="100" x="-20" y="-69"/>
+</i>

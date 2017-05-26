@@ -1,0 +1,23 @@
+<i>
+  <i image="stand_0.png" delay="600" x="-21" y="-65"/>
+  <i image="stand_1.png" delay="120" x="-21" y="-65"/>
+  <i image="stand_2.png" delay="240" x="-21" y="-65"/>
+  <i image="stand_3.png" delay="120" x="-21" y="-65"/>
+  <i image="stand_4.png" delay="120" x="-21" y="-65"/>
+  <i image="say_0.png" delay="600" x="-21" y="-65"/>
+  <i image="say_1.png" delay="120" x="-21" y="-65"/>
+  <i image="say_2.png" delay="180" x="-21" y="-65"/>
+  <i image="say_3.png" delay="180" x="-21" y="-65"/>
+  <i image="say_4.png" delay="120" x="-21" y="-65"/>
+  <i image="say_5.png" delay="180" x="-21" y="-65"/>
+  <i image="say_6.png" delay="180" x="-21" y="-65"/>
+  <i image="say_7.png" delay="180" x="-21" y="-65"/>
+  <i image="say_8.png" delay="180" x="-21" y="-65"/>
+  <i image="act_0.png" delay="600" x="-21" y="-65"/>
+  <i image="act_1.png" delay="120" x="-21" y="-65"/>
+  <i image="act_2.png" delay="120" x="-21" y="-65"/>
+  <i image="act_3.png" delay="120" x="-21" y="-65"/>
+  <i image="act_4.png" delay="120" x="-21" y="-65"/>
+  <i image="act_5.png" delay="120" x="-21" y="-65"/>
+  <i image="act_6.png" delay="120" x="-21" y="-65"/>
+</i>
