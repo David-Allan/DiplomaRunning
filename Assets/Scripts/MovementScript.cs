@@ -13,7 +13,7 @@ public class MovementScript : MonoBehaviour {
     public float maxJumpSpeed;
 	
 	private bool down;
-    private bool grounded; 
+    public bool grounded; 
 	
 
 	void Start () {
@@ -22,7 +22,7 @@ public class MovementScript : MonoBehaviour {
 		animacao = GetComponent<Animator>(); 
 
 		down = false;					
-        jumpforce = 8;
+        jumpforce = 5;
         speed = 8;
         maxJumpSpeed = 2;
     }
@@ -41,7 +41,7 @@ public class MovementScript : MonoBehaviour {
             if (grounded){
                 myRigidbody2D.AddForce(new Vector2(speed, 0) - myRigidbody2D.velocity);
             }
-            else if (myRigidbody2D.velocity.x < maxJumpSpeed) myRigidbody2D.AddForce(new Vector2(speed, 0));
+            else if (myRigidbody2D.velocity.x < maxJumpSpeed) myRigidbody2D.AddForce(new Vector2(speed, 0)*2);
         }
 
 
@@ -51,7 +51,7 @@ public class MovementScript : MonoBehaviour {
             if (grounded){
                 myRigidbody2D.AddForce(new Vector2(-speed, 0) - myRigidbody2D.velocity);
             }
-            else if (myRigidbody2D.velocity.x > -maxJumpSpeed) myRigidbody2D.AddForce(new Vector2(-speed, 0));
+            else if (myRigidbody2D.velocity.x > -maxJumpSpeed) myRigidbody2D.AddForce(new Vector2(-speed, 0)*2);
         }
 
         //-----------------------------------------------------------------------//

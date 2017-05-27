@@ -79,7 +79,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\CameraController.cs" />
-    <Compile Include="Assets\Scripts\MovmentScript.cs" />
+    <Compile Include="Assets\Scripts\MovementScript.cs" />
     <Compile Include="Assets\Scripts\PadController.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\ScriptsExtras\BackgroundParallax.cs" />
