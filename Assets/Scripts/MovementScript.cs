@@ -11,6 +11,7 @@ public class MovementScript : MonoBehaviour {
 	public int speed;
 	public float jumpforce;
     public float maxJumpSpeed;
+    public int coins;
 	
 	private bool down;
     public bool grounded; 
@@ -19,23 +20,25 @@ public class MovementScript : MonoBehaviour {
 	void Start () {
 
         myRigidbody2D = GetComponent<Rigidbody2D>();
-		animacao = GetComponent<Animator>(); 
-
-		down = false;					
-        jumpforce = 5;
+		animacao = GetComponent<Animator>();
+               
+		down = false;
+        coins = 0;
+        jumpforce = 6;
         speed = 8;
         maxJumpSpeed = 2;
     }
 
-
-    //-----------------------------------------------------------------------//
-
-
+        //-----------------------------------------------------------------------//
+        
     private void Update() {
 
         grounded = Physics2D.OverlapCircle(groundCheck.position, groundDistance, whatIsGround);
         if (grounded) speed = 8;
         else speed = 2;
+
+        //-----------------------------------------------------------------------//
+
 
         if (Input.GetKey(KeyCode.D) && !down){
             if (grounded){
@@ -43,8 +46,7 @@ public class MovementScript : MonoBehaviour {
             }
             else if (myRigidbody2D.velocity.x < maxJumpSpeed) myRigidbody2D.AddForce(new Vector2(speed, 0)*2);
         }
-
-
+        
         //-----------------------------------------------------------------------//
 
         if (Input.GetKey(KeyCode.A) && !down){
@@ -55,48 +57,41 @@ public class MovementScript : MonoBehaviour {
         }
 
         //-----------------------------------------------------------------------//
-
-
-        if (Input.GetKeyDown(KeyCode.Space) && grounded)
+        
+        if (Input.GetKeyDown(KeyCode.Space) && grounded) {
             myRigidbody2D.AddForce(new Vector2(0, jumpforce), ForceMode2D.Impulse);
-
+            animacao.SetFloat("Speed", 0.0F);
+        }
 
         //-----------------------------------------------------------------------//
 
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.S)) {
             down = true;
-
-
+        }
+                    
         //-----------------------------------------------------------------------//
-
-
+        
         if (Input.GetKeyUp(KeyCode.S))
             down = false;
-
-
+        
         //-----------------------------------------------------------------------//
-
-
+        
         /**if (Input.GetKey("p")){ 
 			myRigidbody2D.velocity = Vector2.zero;
 		}**/
 
-
         //-----------------------------------------------------------------------//
         
-
         if (myRigidbody2D.velocity.x < 0)
             transform.localScale = new Vector3(-1f, 1f, 1f);
 
         else if (myRigidbody2D.velocity.x > 0)
             transform.localScale = new Vector3(1f, 1f, 1f);
 
-
         //-----------------------------------------------------------------------//
 
-
         animacao.SetFloat("Speed", Mathf.Abs(myRigidbody2D.velocity.x));
-        animacao.SetBool("Down", down);
         animacao.SetBool("Jump", !grounded);
+        animacao.SetBool("Down", down);
     }
 }	

@@ -8,10 +8,10 @@ public class CameraController : MonoBehaviour {
     private float smoothTime = 0.15F;
     private Vector3 velocity = Vector3.zero;
 
-    public float minYValue = 0;
-    public float maxYValue = 0;
-    public float minXValue = 0;
-    public float maxXValue = 0;
+    public float minYValue;
+    public float maxYValue;
+    public float minXValue;
+    public float maxXValue;
 
     private void FixedUpdate() {
 

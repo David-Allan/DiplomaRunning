@@ -8,29 +8,25 @@ public class PadController : MonoBehaviour {
     public bool isVisible;
     public Vector2 velocity;
     private Rigidbody2D rb;
-    private int maxSpeed;
+    public int maxSpeed;
+    public int speed;
 
     private void Start() {
 
         isActive = true;
         isVisible = true;
-        maxSpeed = 5;
+        speed = 5;
+        maxSpeed = 5;        
     }
 
-    private void OnTriggerEnter2D(Collider2D objeto) {
-
-        
-    }
-
-    void OnTriggerStay2D(Collider2D objeto) {
+      void OnTriggerStay2D(Collider2D objeto) {
 
         rb = objeto.GetComponent<Rigidbody2D>();
 
         if (rb.CompareTag("Player") && rb.velocity.x < maxSpeed) {
 
-            //rb.AddForce(velocity * Time.fixedDeltaTime, ForceMode2D.Impulse);
-
-            rb.AddForce(new Vector2(maxSpeed - rb.velocity.x, 0));
+            //objeto.GetComponent<Animator>().SetFloat("Speed", 0);
+            rb.AddForce(velocity * Time.fixedDeltaTime, ForceMode2D.Impulse);
         }
     }
 }
