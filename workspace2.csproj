@@ -85,6 +85,7 @@
     <Compile Include="Assets\ControllerLimpeza.cs" />
     <Compile Include="Assets\RotateBall.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
+    <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\MovementScript.cs" />
     <Compile Include="Assets\Scripts\PadController.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
