@@ -40,7 +40,7 @@ public class MovementScript : MonoBehaviour {
         //-----------------------------------------------------------------------//
 
 
-        if (Input.GetKey(KeyCode.D) && !down){
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow) && !down){
             if (grounded){
                 myRigidbody2D.AddForce(new Vector2(speed, 0) - myRigidbody2D.velocity);
             }
@@ -49,7 +49,7 @@ public class MovementScript : MonoBehaviour {
         
         //-----------------------------------------------------------------------//
 
-        if (Input.GetKey(KeyCode.A) && !down){
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow) && !down){
             if (grounded){
                 myRigidbody2D.AddForce(new Vector2(-speed, 0) - myRigidbody2D.velocity);
             }
@@ -58,20 +58,20 @@ public class MovementScript : MonoBehaviour {
 
         //-----------------------------------------------------------------------//
         
-        if (Input.GetKeyDown(KeyCode.Space) && grounded) {
+        if (grounded && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown (KeyCode.W))) {
             myRigidbody2D.AddForce(new Vector2(0, jumpforce), ForceMode2D.Impulse);
             animacao.SetFloat("Speed", 0.0F);
         }
 
         //-----------------------------------------------------------------------//
 
-        if (Input.GetKey(KeyCode.S)) {
+        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) {
             down = true;
         }
                     
         //-----------------------------------------------------------------------//
         
-        if (Input.GetKeyUp(KeyCode.S))
+        if (Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.DownArrow))
             down = false;
         
         //-----------------------------------------------------------------------//

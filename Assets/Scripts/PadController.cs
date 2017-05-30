@@ -23,7 +23,7 @@ public class PadController : MonoBehaviour {
 
         rb = objeto.GetComponent<Rigidbody2D>();
 
-        if (rb.CompareTag("Player") && rb.velocity.x < maxSpeed) {
+        if (/*rb.CompareTag("Player") &&*/ rb.velocity.x < maxSpeed) {
 
             //objeto.GetComponent<Animator>().SetFloat("Speed", 0);
             rb.AddForce(velocity * Time.fixedDeltaTime, ForceMode2D.Impulse);
