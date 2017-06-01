@@ -1,0 +1,26 @@
+<i>
+  <i image="stand_0.png" delay="1500" x="-17" y="-70"/>
+  <i image="stand_1.png" delay="100" x="-17" y="-70"/>
+  <i image="stand_2.png" delay="120" x="-17" y="-70"/>
+  <i image="stand_3.png" delay="100" x="-17" y="-70"/>
+  <i image="stand_4.png" delay="100" x="-17" y="-70"/>
+  <i image="stand_5.png" delay="100" x="-17" y="-70"/>
+  <i image="say_0.png" delay="500" x="-17" y="-70"/>
+  <i image="say_1.png" delay="200" x="-17" y="-70"/>
+  <i image="say_2.png" delay="120" x="-17" y="-70"/>
+  <i image="say_3.png" delay="400" x="-17" y="-70"/>
+  <i image="point_0.png" delay="1200" x="-20" y="-70"/>
+  <i image="point_1.png" delay="120" x="-20" y="-70"/>
+  <i image="point_2.png" delay="100" x="-20" y="-70"/>
+  <i image="point_3.png" delay="100" x="-20" y="-70"/>
+  <i image="point_4.png" delay="60" x="-20" y="-70"/>
+  <i image="point_5.png" delay="60" x="-20" y="-70"/>
+  <i image="point_6.png" delay="200" x="-20" y="-70"/>
+  <i image="point_7.png" delay="120" x="-20" y="-70"/>
+  <i image="point_8.png" delay="60" x="-20" y="-70"/>
+  <i image="point_9.png" delay="120" x="-20" y="-70"/>
+  <i image="point_10.png" delay="100" x="-20" y="-70"/>
+  <i image="point_11.png" delay="100" x="-20" y="-70"/>
+  <i image="point_12.png" delay="120" x="-20" y="-70"/>
+  <i image="point_13.png" delay="600" x="-20" y="-70"/>
+</i>

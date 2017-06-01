@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: c3ea66b5ce6837141b48d51364840ae1
+timeCreated: 1496324749
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: KG Tangled Up In You
+  fontNames:
+  - KG Tangled Up In You
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
