@@ -12,6 +12,7 @@ public class MovementScript : MonoBehaviour {
 	public float jumpforce;
     public float maxJumpSpeed;
     public int coins;
+    public int deathCounter;
 	
 	private bool down;
     public bool grounded; 
@@ -27,6 +28,7 @@ public class MovementScript : MonoBehaviour {
         jumpforce = 6;
         speed = 8;
         maxJumpSpeed = 2;
+        deathCounter = 0;
     }
 
         //-----------------------------------------------------------------------//
