@@ -13,6 +13,7 @@ public class CollectScript : MonoBehaviour {
         if (collider.CompareTag("Player")) {
 
             collider.GetComponent<MovementScript>().coins++;
+            //GameObject.Find("GameController").GetComponent<GameController>().to
             AudioSource.PlayClipAtPoint(collect, transform.position);
             gameObject.SetActive(false);
         }

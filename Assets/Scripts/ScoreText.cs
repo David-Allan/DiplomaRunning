@@ -17,6 +17,7 @@ public class ScoreText : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+
+        texto.text = "Vidas: " + (3 - player.GetComponent<MovementScript>().deathCounter);
+    }
 }

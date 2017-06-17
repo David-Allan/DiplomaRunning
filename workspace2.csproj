@@ -81,11 +81,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\CollectScript.cs" />
-    <Compile Include="Assets\ControllerLimpeza.cs" />
-    <Compile Include="Assets\ExtinguisherController.cs" />
-    <Compile Include="Assets\RotateBall.cs" />
+    <ProjectReference Include="workspace2.Plugins.csproj">
+      <Project>{D6B5DBB0-F11D-E8FF-30AB-E868CAC5C8AA}</Project>
+      <Name>workspace2.Plugins</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\ControllerMaquina.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
+    <Compile Include="Assets\Scripts\CollectScript.cs" />
+    <Compile Include="Assets\Scripts\ControllerLimpeza.cs" />
+    <Compile Include="Assets\Scripts\ExtinguisherController.cs" />
+    <Compile Include="Assets\Scripts\GUITimer.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\GameOverCamera.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
@@ -93,6 +100,7 @@
     <Compile Include="Assets\Scripts\OutOfBounds.cs" />
     <Compile Include="Assets\Scripts\PadController.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\RotateBall.cs" />
     <Compile Include="Assets\Scripts\ScoreText.cs" />
     <Compile Include="Assets\Scripts\ScriptsExtras\BackgroundParallax.cs" />
     <Compile Include="Assets\Scripts\ScriptsExtras\BackgroundPropSpawner.cs" />
@@ -138,6 +146,8 @@
     <None Include="Assets\AssetsComuns\Animacoes\ContagemRegressiva\data.xml" />
     <None Include="Assets\AssetsComuns\Animacoes\FimTempo\data.xml" />
     <None Include="Assets\AssetsComuns\Animacoes\RespostaErrada\data.xml" />
+    <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
+    <None Include="Assets\Standard Assets\ParticleSystems\ParticleSystemsGuidelines.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

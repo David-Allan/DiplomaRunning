@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "workspace2.Plugins", "workspace2.Plugins.csproj", "{D6B5DBB0-F11D-E8FF-30AB-E868CAC5C8AA}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "workspace2", "workspace2.csproj", "{741E70E9-FF3A-0606-1A4F-4D509269092B}"
 EndProject
 Global
@@ -9,6 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D6B5DBB0-F11D-E8FF-30AB-E868CAC5C8AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6B5DBB0-F11D-E8FF-30AB-E868CAC5C8AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6B5DBB0-F11D-E8FF-30AB-E868CAC5C8AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6B5DBB0-F11D-E8FF-30AB-E868CAC5C8AA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{741E70E9-FF3A-0606-1A4F-4D509269092B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{741E70E9-FF3A-0606-1A4F-4D509269092B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{741E70E9-FF3A-0606-1A4F-4D509269092B}.Release|Any CPU.ActiveCfg = Release|Any CPU
