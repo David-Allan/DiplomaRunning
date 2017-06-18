@@ -5,12 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
 
-    int totalCoins;
+    public int totalCoins;
+    public int currentCoins;
 
     void Start() {
 
         DontDestroyOnLoad(GameObject.Find("GameController"));
         totalCoins = 0;
+        currentCoins = 0;
     }
 }
 

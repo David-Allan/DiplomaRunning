@@ -87,15 +87,18 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\ControllerMaquina.cs" />
+    <Compile Include="Assets\CoinsCollected.cs" />
+    <Compile Include="Assets\GUICoins.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\CollectScript.cs" />
     <Compile Include="Assets\Scripts\ControllerLimpeza.cs" />
+    <Compile Include="Assets\Scripts\ControllerMaquina.cs" />
     <Compile Include="Assets\Scripts\ExtinguisherController.cs" />
     <Compile Include="Assets\Scripts\GUITimer.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\GameOverCamera.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
+    <Compile Include="Assets\Scripts\MenuCamController.cs" />
     <Compile Include="Assets\Scripts\MovementScript.cs" />
     <Compile Include="Assets\Scripts\OutOfBounds.cs" />
     <Compile Include="Assets\Scripts\PadController.cs" />

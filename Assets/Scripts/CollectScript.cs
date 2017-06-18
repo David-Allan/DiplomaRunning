@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(AudioSource))]
 
@@ -13,7 +14,9 @@ public class CollectScript : MonoBehaviour {
         if (collider.CompareTag("Player")) {
 
             collider.GetComponent<MovementScript>().coins++;
-            //GameObject.Find("GameController").GetComponent<GameController>().to
+            GameObject.Find("CoinsGUI").GetComponent<Text>().text = "Moedas: " + collider.GetComponent<MovementScript>().coins.ToString();
+            GameObject.Find("GameController").GetComponent<GameController>().totalCoins++;
+            GameObject.Find("GameController").GetComponent<GameController>().currentCoins = GameObject.Find("Player").GetComponent<MovementScript>().coins;
             AudioSource.PlayClipAtPoint(collect, transform.position);
             gameObject.SetActive(false);
         }
