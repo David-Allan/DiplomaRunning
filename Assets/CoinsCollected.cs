@@ -8,12 +8,15 @@ public class CoinsCollected : MonoBehaviour {
     public int coins;
     Text texto;
 
-	void Start () {
+    void Start() {
 
         texto = GetComponent<Text>();
         coins = GameObject.Find("GameController").GetComponent<GameController>().currentCoins;
-        texto.text = coins.ToString();
+
+        if (coins == 0)
+            texto.text = 0.ToString();
+        else texto.text = coins.ToString();
 
         GameObject.Find("CoinsGUI").GetComponent<Text>().text = coins.ToString();
-	}
+    }
 }
