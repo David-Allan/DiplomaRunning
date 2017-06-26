@@ -2,43 +2,55 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ControllerMaquina : MonoBehaviour {
 
     public float vida;
-    public ParticleSystem ps;
+    private GameObject healthBar;
 
     // Use this for initialization
     void Start() {
 
-        ps = GetComponent<ParticleSystem>();
         vida = 100;
+        healthBar = GameObject.Find("Vida");
     }
 
     // Update is called once per frame
     void FixedUpdate() {
 
         vida -= 0.015F;
+        ReduzirBarraVida();
+        if (vida <= 0) SceneManager.LoadScene("gameOver");
+
     }
 
-    void OnParticleTrigger() {
+    public void ReduzirBarraVida() {
 
-        List<ParticleSystem.Particle> enter = new List<ParticleSystem.Particle>();
-        int numEnter = ps.GetTriggerParticles(ParticleSystemTriggerEventType.Enter, enter);
+        healthBar.GetComponent<Image>().fillAmount -= 0.00015F;
+    }
 
-        if (numEnter > 0) {
+    public void AumentarBarraVida() {
 
-            if (GameObject.Find("Player").GetComponent<MovementScript>().deathCounter < 2) {
+        healthBar.GetComponent<Image>().fillAmount += 0.0003F;
+    }
 
-                GameObject.Find("Player").GetComponent<MovementScript>().deathCounter++;
-                Vector3 startPosition = new Vector3(-26.78F, -4.12F, 0);
-                Quaternion rotation = GameObject.Find("Player").GetComponent<Transform>().rotation;
-                GameObject.Find("Player").GetComponent<Transform>().SetPositionAndRotation(startPosition, rotation);
-            }
-            else SceneManager.LoadScene("gameOver");
+    void OnTriggerEnter2D(Collider2D collider) {
+
+        if (GameObject.Find("Player").GetComponent<MovementScript>().deathCounter < 2) {
+
+            GameObject.Find("Player").GetComponent<MovementScript>().deathCounter++;
+            Vector3 startPosition = new Vector3(-26.78F, -4.12F, 0);
+            Quaternion rotation = GameObject.Find("Player").GetComponent<Transform>().rotation;
+            GameObject.Find("Player").GetComponent<Transform>().SetPositionAndRotation(startPosition, rotation);
         }
+        else SceneManager.LoadScene("gameOver");
     }
+
+
+
 }
+
 
 
 //133 - (tempo) + 3(moedas)
@@ -55,6 +67,6 @@ public class ControllerMaquina : MonoBehaviour {
 // 133 - 63 
 //
 
-    
+
 //63s para completar com todas as moeda (10) = 100 = S
 

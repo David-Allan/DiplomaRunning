@@ -14,18 +14,24 @@ public class ExtinguisherController : MonoBehaviour {
     public void Start() {
 
         ps = GetComponent<ParticleSystem>();
-        scale = new Vector3(0.7F, 0.7F, 0.7F);
+        scale = new Vector3(0.8F, 1.3F, 0.3F);
     }
 
     // Update is called once per frame
     private void OnTriggerEnter2D(Collider2D collider) {
 
+        GameObject.Find("Prateleira09").SetActive(false);
+        GameObject.Find("Trampolim05").SetActive(false);
+        GameObject.Find("PlataformaEscada").SetActive(false);
+        Destroy(GameObject.Find("Escada").GetComponent<Rigidbody2D>());
+        Destroy(GameObject.Find("Escada").GetComponent<Collider2D>());
+
         gameObject.transform.SetParent(GameObject.Find("L_Hand").transform);
-        rotacao = collider.transform.rotation;
+        rotacao = GameObject.Find("Player").transform.rotation;
         position = GameObject.Find("L_Hand").transform.position;
         gameObject.transform.SetPositionAndRotation(position, rotacao);
 
-        transform.localScale -= scale;
+        transform.localScale = scale;
         collider.GetComponent<MovementScript>().hasObject = true;
         gameObject.GetComponent<Collider2D>().enabled = false;
     }
@@ -37,8 +43,10 @@ public class ExtinguisherController : MonoBehaviour {
 
         for (int i = 0; i < numEnter; i++) {
 
-            if (GameObject.Find("MaquinaSalgadinhos").GetComponent<ControllerMaquina>().vida < 100F)
+            if (GameObject.Find("MaquinaSalgadinhos").GetComponent<ControllerMaquina>().vida < 100F) {
                 GameObject.Find("MaquinaSalgadinhos").GetComponent<ControllerMaquina>().vida += 0.03F;
+                GameObject.Find("MaquinaSalgadinhos").GetComponent<ControllerMaquina>().AumentarBarraVida();
+            }
             else break;
         }
 

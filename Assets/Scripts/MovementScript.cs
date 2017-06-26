@@ -6,14 +6,18 @@ public class MovementScript : MonoBehaviour {
     public Animator animacao;
     public LayerMask whatIsGround;
     public Transform groundCheck;
-    public float groundDistance;
+    public ParticleSystem particle;
+    public AudioClip footsteps1;
+    public AudioClip footsteps2;
+    public AudioClip landingSound;
 
+    public float groundDistance;
     public int speed;
     public float jumpforce;
     public float maxJumpSpeed;
     public int coins;
     public int deathCounter;
-    public ParticleSystem particle;
+    
     private bool down;
     public bool grounded;
     public bool hasObject;
