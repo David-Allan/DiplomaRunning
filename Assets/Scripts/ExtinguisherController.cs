@@ -43,16 +43,13 @@ public class ExtinguisherController : MonoBehaviour {
 
         for (int i = 0; i < numEnter; i++) {
 
-            if (GameObject.Find("MaquinaSalgadinhos").GetComponent<ControllerMaquina>().vida < 100F) {
-                GameObject.Find("MaquinaSalgadinhos").GetComponent<ControllerMaquina>().vida += 0.03F;
-                GameObject.Find("MaquinaSalgadinhos").GetComponent<ControllerMaquina>().AumentarBarraVida();
+            ControllerMaquina controller = GameObject.Find("MaquinaSalgadinhos").GetComponent<ControllerMaquina>();
+
+            if (controller.vida < 100F) {
+                controller.vida += 0.03F;
+                controller.AumentarBarraVida();
             }
             else break;
-        }
-
-        if (GameObject.Find("MaquinaSalgadinhos").GetComponent<ControllerMaquina>().vida >= 100F){
-            GameObject.Find("MaquinaSalgadinhos").GetComponent<ParticleSystem>().Pause();
-            SceneManager.LoadScene("youWin");
         }
     }
 }

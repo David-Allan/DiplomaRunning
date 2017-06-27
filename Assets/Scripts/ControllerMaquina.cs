@@ -22,6 +22,8 @@ public class ControllerMaquina : MonoBehaviour {
         vida -= 0.015F;
         ReduzirBarraVida();
         if (vida <= 0) SceneManager.LoadScene("gameOver");
+        else if (vida >= 100) SceneManager.LoadScene("youWin");
+        //GameObject.Find("FireComplex").GetComponent<ParticleSystemDestroyer>().
 
     }
 
