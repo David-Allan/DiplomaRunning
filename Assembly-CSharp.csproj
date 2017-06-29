@@ -19,7 +19,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_5_6_1;UNITY_5_6;UNITY_5;UNITY_64;UNITY_ANALYTICS;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_RUNTIME_NAVMESH_BUILDING;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;INCLUDE_DYNAMIC_GI;INCLUDE_GI;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_SCRIPTING_NEW_CSHARP_COMPILER;ENABLE_VIDEO;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_EVENT_QUEUE;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_2_0_SUBSET;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_5_6_1;UNITY_5_6;UNITY_5;UNITY_64;UNITY_ANALYTICS;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_RUNTIME_NAVMESH_BUILDING;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;INCLUDE_DYNAMIC_GI;INCLUDE_GI;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_SCRIPTING_NEW_CSHARP_COMPILER;ENABLE_VIDEO;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_EVENT_QUEUE;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_2_0_SUBSET;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE;CROSS_PLATFORM_INPUT</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
@@ -46,13 +46,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\CoinsCollected.cs" />
-     <Compile Include="Assets\GUICoins.cs" />
      <Compile Include="Assets\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\CollectScript.cs" />
      <Compile Include="Assets\Scripts\ControllerLimpeza.cs" />
      <Compile Include="Assets\Scripts\ControllerMaquina.cs" />
+     <Compile Include="Assets\Scripts\CustsceneCameraCorredor.cs" />
+     <Compile Include="Assets\Scripts\CutsceneMaquina.cs" />
+     <Compile Include="Assets\Scripts\ExplosionPhysicsForce.cs" />
+     <Compile Include="Assets\Scripts\Explosive.cs" />
      <Compile Include="Assets\Scripts\ExtinguisherController.cs" />
+     <Compile Include="Assets\Scripts\FireLight.cs" />
      <Compile Include="Assets\Scripts\GUITimer.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
      <Compile Include="Assets\Scripts\GameOverCamera.cs" />
@@ -61,30 +64,12 @@
      <Compile Include="Assets\Scripts\MovementScript.cs" />
      <Compile Include="Assets\Scripts\OutOfBounds.cs" />
      <Compile Include="Assets\Scripts\PadController.cs" />
+     <Compile Include="Assets\Scripts\ParticleSystemDestroyer.cs" />
+     <Compile Include="Assets\Scripts\ParticleSystemMultiplier.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\PlayerCutscene.cs" />
      <Compile Include="Assets\Scripts\RotateBall.cs" />
      <Compile Include="Assets\Scripts\ScoreText.cs" />
-     <Compile Include="Assets\Scripts\ScriptsExtras\BackgroundParallax.cs" />
-     <Compile Include="Assets\Scripts\ScriptsExtras\BackgroundPropSpawner.cs" />
-     <Compile Include="Assets\Scripts\ScriptsExtras\Bomb.cs" />
-     <Compile Include="Assets\Scripts\ScriptsExtras\BombPickup.cs" />
-     <Compile Include="Assets\Scripts\ScriptsExtras\CameraFollow.cs" />
-     <Compile Include="Assets\Scripts\ScriptsExtras\Destroyer.cs" />
-     <Compile Include="Assets\Scripts\ScriptsExtras\Enemy.cs" />
-     <Compile Include="Assets\Scripts\ScriptsExtras\FollowPlayer.cs" />
-     <Compile Include="Assets\Scripts\ScriptsExtras\Gun.cs" />
-     <Compile Include="Assets\Scripts\ScriptsExtras\HealthPickup.cs" />
-     <Compile Include="Assets\Scripts\ScriptsExtras\LayBombs.cs" />
-     <Compile Include="Assets\Scripts\ScriptsExtras\Pauser.cs" />
-     <Compile Include="Assets\Scripts\ScriptsExtras\PickupSpawner.cs" />
-     <Compile Include="Assets\Scripts\ScriptsExtras\PlayerControl.cs" />
-     <Compile Include="Assets\Scripts\ScriptsExtras\PlayerHealth.cs" />
-     <Compile Include="Assets\Scripts\ScriptsExtras\Remover.cs" />
-     <Compile Include="Assets\Scripts\ScriptsExtras\Rocket.cs" />
-     <Compile Include="Assets\Scripts\ScriptsExtras\Score.cs" />
-     <Compile Include="Assets\Scripts\ScriptsExtras\ScoreShadow.cs" />
-     <Compile Include="Assets\Scripts\ScriptsExtras\SetParticleSortingLayer.cs" />
-     <Compile Include="Assets\Scripts\ScriptsExtras\Spawner.cs" />
      <Compile Include="Assets\Scripts\SpringController.cs" />
      <None Include="Assets\AssetsComuns\Adversários\Professor07\data.xml" />
      <None Include="Assets\AssetsComuns\Animacoes\RespostaErrada\data.xml" />
@@ -96,20 +81,23 @@
      <None Include="Assets\AssetsComuns\Adversários\Estudante06\data.xml" />
      <None Include="Assets\AssetsComuns\Adversários\Professor06\data.xml" />
      <None Include="Assets\AssetsComuns\Adversários\Estudante03\data.xml" />
+     <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAlpha.shader" />
      <None Include="Assets\AssetsComuns\Adversários\Estudante04\data.xml" />
      <None Include="Assets\Standard Assets\ParticleSystems\ParticleSystemsGuidelines.txt" />
      <None Include="Assets\AssetsComuns\Adversários\Professor08\data.xml" />
      <None Include="Assets\AssetsComuns\Adversários\Professor05\data.xml" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\AssetsComuns\Adversários\Estudante01\data.xml" />
+     <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAddSoft.shader" />
      <None Include="Assets\AssetsComuns\Adversários\Estudante08\data.xml" />
      <None Include="Assets\AssetsComuns\Adversários\Professor04\data.xml" />
      <None Include="Assets\AssetsComuns\Adversários\Professor02\data.xml" />
      <None Include="Assets\AssetsComuns\Animacoes\ContagemRegressiva\Professor01\data.xml" />
+     <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAdd.shader" />
      <None Include="Assets\AssetsComuns\Animacoes\ContagemRegressiva\data.xml" />
      <None Include="Assets\AssetsComuns\Animacoes\ComecoTempo\data.xml" />
  <Reference Include="Facebook.Unity.Settings">
- <HintPath>C:/Users/Lilian/Desktop/git 18-06/DiplomaRunning/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
+ <HintPath>C:/Users/Lilian/Desktop/Git BAckup/DiplomaRunning/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>E:/Programas/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
