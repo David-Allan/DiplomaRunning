@@ -7,27 +7,38 @@ using UnityEngine.UI;
 public class ControllerMaquina : MonoBehaviour {
 
     public float vida;
+    private GameObject explosao;
+    private GameObject fogo;
     private GameObject healthBar;
 
     // Use this for initialization
     void Start() {
 
-        vida = 100;
+        explosao = GameObject.Find("Explosion");
+        fogo = GameObject.Find("FireComplex");
         healthBar = GameObject.Find("Vida");
+        explosao.SetActive(false);
+        vida = 100;
     }
 
-    // Update is called once per frame
+
     void FixedUpdate() {
 
         vida -= 0.015F;
         ReduzirBarraVida();
-        if (vida <= 0) SceneManager.LoadScene("gameOver");
+        if (vida <= 0) StartCoroutine(endGame());
         else if (vida >= 100) SceneManager.LoadScene("youWin");
-        //GameObject.Find("FireComplex").GetComponent<ParticleSystemDestroyer>().
-
     }
 
-    public void ReduzirBarraVida() {
+    private IEnumerator endGame() {
+
+        explosao.SetActive(true);
+        fogo.SetActive(false);
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene("gameOver");
+    }
+
+    private void ReduzirBarraVida() {
 
         healthBar.GetComponent<Image>().fillAmount -= 0.00015F;
     }
@@ -39,18 +50,18 @@ public class ControllerMaquina : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D collider) {
 
-        if (GameObject.Find("Player").GetComponent<MovementScript>().deathCounter < 2) {
+        if (collider.CompareTag("Player")) {
 
-            GameObject.Find("Player").GetComponent<MovementScript>().deathCounter++;
-            Vector3 startPosition = new Vector3(-26.78F, -4.12F, 0);
-            Quaternion rotation = GameObject.Find("Player").GetComponent<Transform>().rotation;
-            GameObject.Find("Player").GetComponent<Transform>().SetPositionAndRotation(startPosition, rotation);
+            if (GameObject.Find("Player").GetComponent<MovementScript>().deathCounter < 2) {
+
+                GameObject.Find("Player").GetComponent<MovementScript>().deathCounter++;
+                Vector3 startPosition = new Vector3(-26.78F, -4.12F, 0);
+                Quaternion rotation = GameObject.Find("Player").GetComponent<Transform>().rotation;
+                GameObject.Find("Player").GetComponent<Transform>().SetPositionAndRotation(startPosition, rotation);
+            }
+            else SceneManager.LoadScene("gameOver");
         }
-        else SceneManager.LoadScene("gameOver");
     }
-
-
-
 }
 
 

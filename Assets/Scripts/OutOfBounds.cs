@@ -5,10 +5,11 @@ using UnityEngine;
 
 public class OutOfBounds : MonoBehaviour {
 
-    Animator animacao;
+    private Animator animacao;
+    public AudioClip splash;
 
     private void Start() {
-
+        
         animacao = GameObject.Find("Player").GetComponent<Animator>();
     }
 
@@ -18,6 +19,7 @@ public class OutOfBounds : MonoBehaviour {
 
             if (collider.GetComponent<MovementScript>().deathCounter < 2) {
 
+                AudioSource.PlayClipAtPoint(splash, transform.position);
                 collider.GetComponent<MovementScript>().enabled = false;
                 StartCoroutine(outsideBounds(collider));
             }
@@ -34,7 +36,7 @@ public class OutOfBounds : MonoBehaviour {
     }
 
     private void returnStart(Collider2D collider) {
-        
+
         animacao.SetBool("Down", false);
         animacao.Play("Idle");
         collider.GetComponent<MovementScript>().enabled = true;

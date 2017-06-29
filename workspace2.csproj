@@ -91,7 +91,12 @@
     <Compile Include="Assets\Scripts\CollectScript.cs" />
     <Compile Include="Assets\Scripts\ControllerLimpeza.cs" />
     <Compile Include="Assets\Scripts\ControllerMaquina.cs" />
+    <Compile Include="Assets\Scripts\CustsceneCameraCorredor.cs" />
+    <Compile Include="Assets\Scripts\CutsceneMaquina.cs" />
+    <Compile Include="Assets\Scripts\ExplosionPhysicsForce.cs" />
+    <Compile Include="Assets\Scripts\Explosive.cs" />
     <Compile Include="Assets\Scripts\ExtinguisherController.cs" />
+    <Compile Include="Assets\Scripts\FireLight.cs" />
     <Compile Include="Assets\Scripts\GUITimer.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\GameOverCamera.cs" />
@@ -100,7 +105,10 @@
     <Compile Include="Assets\Scripts\MovementScript.cs" />
     <Compile Include="Assets\Scripts\OutOfBounds.cs" />
     <Compile Include="Assets\Scripts\PadController.cs" />
+    <Compile Include="Assets\Scripts\ParticleSystemDestroyer.cs" />
+    <Compile Include="Assets\Scripts\ParticleSystemMultiplier.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\PlayerCutscene.cs" />
     <Compile Include="Assets\Scripts\RotateBall.cs" />
     <Compile Include="Assets\Scripts\ScoreText.cs" />
     <Compile Include="Assets\Scripts\SpringController.cs" />

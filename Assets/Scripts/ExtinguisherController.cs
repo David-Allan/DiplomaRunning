@@ -17,7 +17,6 @@ public class ExtinguisherController : MonoBehaviour {
         scale = new Vector3(0.8F, 1.3F, 0.3F);
     }
 
-    // Update is called once per frame
     private void OnTriggerEnter2D(Collider2D collider) {
 
         GameObject.Find("Prateleira09").SetActive(false);

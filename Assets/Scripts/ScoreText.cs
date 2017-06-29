@@ -12,12 +12,12 @@ public class ScoreText : MonoBehaviour {
 	void Start () {
 
         texto = GetComponent<Text>();
-        texto.text = "Vidas: " + (3 - player.GetComponent<MovementScript>().deathCounter); 
+        texto.text = (3 - player.GetComponent<MovementScript>().deathCounter).ToString(); 
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-        texto.text = "Vidas: " + (3 - player.GetComponent<MovementScript>().deathCounter);
+        texto.text = (3 - player.GetComponent<MovementScript>().deathCounter).ToString();
     }
 }

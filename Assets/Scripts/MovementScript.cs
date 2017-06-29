@@ -72,7 +72,8 @@ public class MovementScript : MonoBehaviour {
 
         //-----------------------------------------------------------------------//
 
-        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) {
+        /*
+         *if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) {
             down = true;
         }
 
@@ -82,6 +83,7 @@ public class MovementScript : MonoBehaviour {
             down = false;
 
         //-----------------------------------------------------------------------//
+        */
 
         if (hasObject == true) {
 
