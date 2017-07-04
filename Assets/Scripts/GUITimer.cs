@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class GUITimer : MonoBehaviour {
 
-    float timer;
+    public float timer;
     Text textoTimer;
 
 	// Use this for initialization

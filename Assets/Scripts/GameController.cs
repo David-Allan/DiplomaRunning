@@ -7,12 +7,13 @@ public class GameController : MonoBehaviour {
 
     public int totalCoins;
     public int currentCoins;
+    public int finishTime;
 
     void Start() {
 
-        DontDestroyOnLoad(GameObject.Find("GameController"));
         totalCoins = 0;
         currentCoins = 0;
+        DontDestroyOnLoad(gameObject);
     }
 }
 

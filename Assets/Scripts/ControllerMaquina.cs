@@ -11,8 +11,7 @@ public class ControllerMaquina : MonoBehaviour {
     private GameObject fogo;
     private GameObject healthBar;
 
-    // Use this for initialization
-    void Start() {
+    private void Awake() {
 
         explosao = GameObject.Find("Explosion");
         fogo = GameObject.Find("FireComplex");
@@ -21,13 +20,16 @@ public class ControllerMaquina : MonoBehaviour {
         vida = 100;
     }
 
-
     void FixedUpdate() {
 
         vida -= 0.015F;
         ReduzirBarraVida();
         if (vida <= 0) StartCoroutine(endGame());
-        else if (vida >= 100) SceneManager.LoadScene("youWin");
+        else if (vida >= 100) {
+            float timer = GameObject.Find("TimerGUI").GetComponent<GUITimer>().timer;
+            GameObject.Find("GameController").GetComponent<GameController>().finishTime = (int)timer;
+            SceneManager.LoadScene("youWin");
+        }
     }
 
     private IEnumerator endGame() {

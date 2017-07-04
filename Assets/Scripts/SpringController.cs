@@ -17,7 +17,7 @@ public class SpringController : MonoBehaviour {
 		
         if (objeto.CompareTag("Player")) {
 
-            AudioSource.PlayClipAtPoint(som, transform.position);
+            AudioSource.PlayClipAtPoint(som, transform.position, 0.3F);
             objeto.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             objeto.GetComponent<Rigidbody2D>().AddForce(velocidade, ForceMode2D.Impulse);
 			animacao.SetTrigger("gatilho");

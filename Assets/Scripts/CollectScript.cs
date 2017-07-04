@@ -17,7 +17,7 @@ public class CollectScript : MonoBehaviour {
             GameObject.Find("CoinsGUI").GetComponent<Text>().text = collider.GetComponent<MovementScript>().coins.ToString();
             GameObject.Find("GameController").GetComponent<GameController>().totalCoins++;
             GameObject.Find("GameController").GetComponent<GameController>().currentCoins = GameObject.Find("Player").GetComponent<MovementScript>().coins;
-            AudioSource.PlayClipAtPoint(collect, transform.position);
+            AudioSource.PlayClipAtPoint(collect, transform.position, 0.15F);
             gameObject.SetActive(false);
         }
     }
