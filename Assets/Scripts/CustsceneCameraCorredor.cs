@@ -6,7 +6,7 @@ public class CustsceneCameraCorredor : MonoBehaviour {
 
     public Vector3 posicaoFinal;
     public float velocidade;
-    
+    public AudioClip backgroundMusic;
 
     private void Start() {
 

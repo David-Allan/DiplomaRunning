@@ -112,8 +112,9 @@
     <Compile Include="Assets\Scripts\RotateBall.cs" />
     <Compile Include="Assets\Scripts\ScoreText.cs" />
     <Compile Include="Assets\Scripts\SpringController.cs" />
-    <Compile Include="Assets\computerGuyEaster.cs" />
-    <Compile Include="Assets\scoreController.cs" />
+    <Compile Include="Assets\Scripts\computerGuyEaster.cs" />
+    <Compile Include="Assets\Scripts\scoreController.cs" />
+    <Compile Include="Assets\Scripts\selectButtons.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\AssetsComuns\Adversários\Estudante01\data.xml" />

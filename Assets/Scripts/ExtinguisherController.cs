@@ -8,11 +8,14 @@ public class ExtinguisherController : MonoBehaviour {
     public ParticleSystem ps;
     private Vector2 position;
     private Vector3 scale;
+    private GameObject setaInvisivel;
     Quaternion rotacao;
 
 
     public void Start() {
 
+        setaInvisivel = GameObject.Find("Seta03");
+        setaInvisivel.SetActive(false);
         ps = GetComponent<ParticleSystem>();
         scale = new Vector3(0.8F, 1.3F, 0.3F);
     }
@@ -22,6 +25,9 @@ public class ExtinguisherController : MonoBehaviour {
         GameObject.Find("Prateleira09").SetActive(false);
         GameObject.Find("Trampolim05").SetActive(false);
         GameObject.Find("PlataformaEscada").SetActive(false);
+        GameObject.Find("Seta01").SetActive(false);
+        GameObject.Find("Seta02").SetActive(false);
+        setaInvisivel.SetActive(true);
         Destroy(GameObject.Find("Escada").GetComponent<Rigidbody2D>());
         Destroy(GameObject.Find("Escada").GetComponent<Collider2D>());
 
