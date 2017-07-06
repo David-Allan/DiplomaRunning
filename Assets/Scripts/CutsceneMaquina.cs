@@ -16,7 +16,6 @@ public class CutsceneMaquina : MonoBehaviour {
         fogo.SetActive(false);
         healthbar.SetActive(false);
         StartCoroutine(waitSeconds(10));
-        StartCoroutine(callScene(13));
     }
 
     private IEnumerator waitSeconds(float tempo) {
@@ -25,10 +24,4 @@ public class CutsceneMaquina : MonoBehaviour {
         fogo.SetActive(true);
         healthbar.SetActive(true);
     }
-
-    private IEnumerator callScene(float tempo) {
-
-        yield return new WaitForSeconds(tempo);
-        SceneManager.LoadScene("faseCorredor");
-    }    
 }

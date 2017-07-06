@@ -5,57 +5,35 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
 
+    public KeyCode leftKey;
+    public KeyCode rightkey;
+    public KeyCode downKey;
+    public KeyCode jumpkey;
+    public KeyCode itemKey;
+
     public int totalCoins;
     public int currentCoins;
     public int finishTime;
 
-    KeyCode leftKey;
-    KeyCode rightkey;
-    KeyCode downKey;
-    KeyCode jumpkey;
-    KeyCode itemKey;
-
-    void Start() {
+    void Awake() {
 
         totalCoins = 0;
         currentCoins = 0;
+        setButtons();
         DontDestroyOnLoad(gameObject);
     }
 
-    public void gameButtons(int option) {
+    public void setButtons() {
 
-        switch (option) {
+        MainMenu menu = GameObject.Find("MenuController").GetComponent<MainMenu>();
 
-            case 1:
-                leftKey = KeyCode.LeftArrow;
-                rightkey = KeyCode.RightArrow;
-                downKey = KeyCode.DownArrow;
-                jumpkey = KeyCode.UpArrow;
-                itemKey = KeyCode.LeftShift;
+        leftKey = menu.leftKey;
+        rightkey = menu.rightkey;
+        downKey = menu.downKey;
+        jumpkey = menu.jumpkey;
+        itemKey = menu.itemKey;
 
-            break;
-            case 2:
-                leftKey = KeyCode.LeftArrow;
-                rightkey = KeyCode.RightArrow;
-                downKey = KeyCode.DownArrow;
-                jumpkey = KeyCode.Space;
-                itemKey = KeyCode.LeftShift;
-            break;
-            case 3:
-                leftKey = KeyCode.A;
-                rightkey = KeyCode.D;
-                downKey = KeyCode.S;
-                jumpkey = KeyCode.W;
-                itemKey = KeyCode.LeftShift;
-            break;
-            case 4:
-                leftKey = KeyCode.A;
-                rightkey = KeyCode.D;
-                downKey = KeyCode.S;
-                jumpkey = KeyCode.Space;
-                itemKey = KeyCode.LeftShift;
-            break;
-        }
+        Destroy(GameObject.Find("MenuController"));
     }
 }
 

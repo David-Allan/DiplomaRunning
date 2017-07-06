@@ -1,19 +1,22 @@
 sceneSetups:
-- path: Assets/Scenes/faseCorredor.unity
+- path: Assets/Scenes/MainMenu.unity
+  isLoaded: 1
+  isActive: 1
+- path: Assets/Scenes/cutsceneCorredor.unity
   isLoaded: 0
   isActive: 0
-- path: Assets/Scenes/youWin.unity
+- path: Assets/Scenes/faseCorredor.unity
   isLoaded: 0
   isActive: 0
 - path: Assets/Scenes/gameOver.unity
   isLoaded: 0
   isActive: 0
-- path: Assets/Scenes/MainMenu.unity
+- path: Assets/Scenes/hubCorredor.unity
   isLoaded: 0
   isActive: 0
-- path: Assets/Scenes/selecionarFaseBotoes.unity
-  isLoaded: 1
-  isActive: 1
-- path: Assets/Scenes/cutsceneCorredor.unity
+- path: Assets/Scenes/selecionarFase.unity
+  isLoaded: 0
+  isActive: 0
+- path: Assets/Scenes/youWin.unity
   isLoaded: 0
   isActive: 0

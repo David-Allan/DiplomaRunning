@@ -11,22 +11,31 @@ public class MovementScript : MonoBehaviour {
     public AudioClip footsteps2;
     public AudioClip landingSound;
 
+    public KeyCode leftKey;
+    public KeyCode rightkey;
+    public KeyCode downKey;
+    public KeyCode jumpkey;
+    public KeyCode itemKey;
+
     public float groundDistance;
     public int speed;
     public float jumpforce;
     public float maxJumpSpeed;
     public int coins;
     public int deathCounter;
-    
+
     private bool down;
     public bool grounded;
     public bool hasObject;
 
+    GameController gameController;
 
     void Start() {
 
         myRigidbody2D = GetComponent<Rigidbody2D>();
         animacao = GetComponent<Animator>();
+        gameController = GameObject.Find("GameController").GetComponent<GameController>();
+        SetData();
 
         down = false;
         coins = 0;
@@ -47,7 +56,7 @@ public class MovementScript : MonoBehaviour {
         //-----------------------------------------------------------------------//
 
 
-        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow) && !down) {
+        if (Input.GetKey(rightkey) && !down) {
             if (grounded) {
                 myRigidbody2D.AddForce(new Vector2(speed, 0) - myRigidbody2D.velocity);
             }
@@ -56,7 +65,7 @@ public class MovementScript : MonoBehaviour {
 
         //-----------------------------------------------------------------------//
 
-        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow) && !down) {
+        if (Input.GetKey(leftKey) && !down) {
             if (grounded) {
                 myRigidbody2D.AddForce(new Vector2(-speed, 0) - myRigidbody2D.velocity);
             }
@@ -65,7 +74,7 @@ public class MovementScript : MonoBehaviour {
 
         //-----------------------------------------------------------------------//
 
-        if (grounded && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))) {
+        if (grounded && (Input.GetKeyDown(jumpkey))) {
             myRigidbody2D.AddForce(new Vector2(0, jumpforce), ForceMode2D.Impulse);
             animacao.SetFloat("Speed", 0.0F);
         }
@@ -73,13 +82,12 @@ public class MovementScript : MonoBehaviour {
         //-----------------------------------------------------------------------//
 
         /*
-         *if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) {
+         *if (grounded && Input.GetKey(downKey))
             down = true;
-        }
-
+        
         //-----------------------------------------------------------------------//
 
-        if (Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.DownArrow))
+        if (grounded && Input.GetKeyUp(downKey))
             down = false;
 
         //-----------------------------------------------------------------------//
@@ -118,5 +126,19 @@ public class MovementScript : MonoBehaviour {
         animacao.SetFloat("Speed", Mathf.Abs(myRigidbody2D.velocity.x));
         animacao.SetBool("Jump", !grounded);
         animacao.SetBool("Down", down);
+    }
+
+    private void SetData() {
+
+        GameController gameController = GameObject.Find("GameController").GetComponent<GameController>();
+
+        leftKey = gameController.leftKey;
+        rightkey = gameController.rightkey;
+        downKey = gameController.downKey;
+        jumpkey = gameController.jumpkey;
+        itemKey = gameController.itemKey;
+
+        gameController.currentCoins = 0;
+        gameController.totalCoins = 0;
     }
 }
